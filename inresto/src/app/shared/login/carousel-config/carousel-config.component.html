@@ -1,26 +1,26 @@
 
-<ngb-carousel>
+<ngb-carousel *ngIf="banners">
   <ng-template ngbSlide>
-    <img src="assets/images/loginslider1.jpg" alt="first slide"> 
+    <img [src]="banners[0].bannerUrl" alt="first slide">
+    <!-- <img src="assets/images/loginslider1.jpg" alt="first slide">  -->
     <div class="carousel-caption">
       <img src="assets/images/artboard1.png" alt="">
       <img src="assets/images/artboard2.png" alt="">
       <div class="clearfix"></div>
-        <h3>Quis autem vel eum iure reprehenderit <br/>qui in ea voluptate velit esse quam.</h3>
-        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-            nisi ut aliquid ex ea commodi consequatur?</p>
+      <h3>{{banners[0].bannerName}}</h3>
+      <p>{{banners[0].bannerDescription}}</p>
         <a href="#" class="btn loginbtn">Learn How it Works</a>
       </div> 
   </ng-template>
   <ng-template ngbSlide>
-      <img src="assets/images/loginslider1.jpg" alt="first slide"> 
+      <img [src]="banners[1].bannerUrl" alt="first slide">
+      <!-- <img src="assets/images/loginslider1.jpg" alt="first slide">  -->
       <div class="carousel-caption">
         <img src="assets/images/artboard1.png" alt="">
         <img src="assets/images/artboard2.png" alt="">
         <div class="clearfix"></div>
-          <h3>Quis autem vel eum iure reprehenderit <br/>qui in ea voluptate velit esse quam.</h3>
-          <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-              nisi ut aliquid ex ea commodi consequatur?</p>
+          <h3>{{banners[1].bannerName}}</h3>
+          <p>{{banners[1].bannerDescription}}</p>
           <a href="#" class="btn loginbtn">Learn How it Works</a>
         </div> 
     </ng-template>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
+import { BannerService} from './services/banner.service';
 import { LoggerService } from './logger.service';
 import { SharedModule } from './shared/shared.module';
 import { CommonviewsModule } from './commonviews/commonviews.module';
@@ -30,6 +31,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   providers: [
     DataService,
     LoggerService,
+    BannerService
   ],
   bootstrap: [AppComponent]
 })

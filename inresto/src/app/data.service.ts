@@ -16,7 +16,6 @@ export class DataService {
   submenuIndex = 101;
   userLoggedIn = false;
   constructor(public http: HttpClient, public logger: LoggerService) {
-
     DataService.dataService = this;
    }
    static getDataService(){
