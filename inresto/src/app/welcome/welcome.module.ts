@@ -7,7 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 import { CommonviewsModule } from '../commonviews/commonviews.module';
 
 import { WelcomeComponent } from './welcome/welcome.component';
-import {DetailsModule} from './details/details.module'
+import {DetailsModule} from './details/details.module';
+import { DineinModule } from './dinein/dinein.module'
 
 @NgModule({
   declarations: [WelcomeComponent],
@@ -16,6 +17,7 @@ import {DetailsModule} from './details/details.module'
     SharedModule,
     CommonviewsModule,
     DetailsModule,
+    DineinModule,
   ],exports:[
     WelcomeComponent,
   ]

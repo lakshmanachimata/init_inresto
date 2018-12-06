@@ -13,6 +13,8 @@ import { Observable } from 'rxjs';
 export class DashboardComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   respData : [];
+  showAddRsrv = false;
+  showAvailability = false;
 
   constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
   }
@@ -23,6 +25,12 @@ export class DashboardComponent implements OnInit, OnInit, DoCheck, AfterContent
     }
       
     )
+  }
+  onAddReservation(){
+    this.showAddRsrv = true;
+  }
+  onCheckavailability(){
+    this.showAvailability = true;
   }
   ngOnChanges() {
   }

@@ -13,7 +13,8 @@
     <a class="nav-link" data-toggle="tab" href="#history">History</a>
   </li>
 </ul>
-
+<app-addreservationpopup *ngIf="this.showAddRsrv == true"></app-addreservationpopup>
+<app-checkavailabilitypopup *ngIf="this.showAvailability == true"></app-checkavailabilitypopup>
 <!-- Tab panes -->
 <div class="tab-content TabBg">
   <div id="lr" class="container tab-pane active"><br>
@@ -22,24 +23,10 @@
         <h4 class="live_req">Live Requests</h4>
       </div>
       <div class="col-md-9 d-flex justify-content-end btnContainer">
-        <button class="checkAvailability">Check Availability</button>
-        <button class="adresrv" (click)="Addreservation()">Add Reservation</button>
-        <button class="add_walkin">Add Walkin</button>
-        <div class="btn-group" dropdown>
-            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                    aria-controls="dropdown-basic">
-              Button dropdown <span class="caret"></span>
-            </button>
-            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-                role="menu" aria-labelledby="button-basic">
-              <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-              <li class="divider dropdown-divider"></li>
-              <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-              </li>
-            </ul>
-          </div>
+        <app-restobutton buttonText="Check Availability" (setOnClick)="onCheckavailability()" ></app-restobutton>
+        <app-restobutton buttonText="Add Reservation" (setOnClick)="onAddReservation()" ></app-restobutton>
+        <app-restobutton buttonText="Add Walkin" (setOnClick)="onButtonClick()" ></app-restobutton>
+        <app-restobutton buttonText="Add Walkin" (setOnClick)="onButtonClick()" ></app-restobutton>        
       </div>
       <div class="col-md-12 d-flex bookingDetails">
         <div class="col-md-4 d-flex">14-11-2018</div>
