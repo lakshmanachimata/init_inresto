@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { Banner } from '../../../services/banner.model';
+import { Banner } from '../../../models/banner.model';
 import { BannerService } from '../../../services/banner.service';
 
 @Component({

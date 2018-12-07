@@ -1,8 +1,20 @@
 
 <ngb-carousel *ngIf="banners">
-  <ng-template ngbSlide>
-    <img [src]="banners[0].bannerUrl" alt="first slide">
+  <ng-template ngbSlide *ngFor = "let banner of banners; let i = index">
+    <img [src]="banner.bannerUrl" alt="first slide">
     <!-- <img src="assets/images/loginslider1.jpg" alt="first slide">  -->
+    <div class="carousel-caption">
+      <img src="assets/images/artboard1.png" alt="">
+      <img src="assets/images/artboard2.png" alt="">
+      <div class="clearfix"></div>
+      <h3>{{banner.bannerName}}</h3>
+      <p>{{banner.bannerDescription}}</p>
+        <a href="#" class="btn loginbtn">Learn How it Works</a>
+      </div> 
+  </ng-template>
+  <!-- <ng-template ngbSlide>
+    <img [src]="banners[0].bannerUrl" alt="first slide">
+    
     <div class="carousel-caption">
       <img src="assets/images/artboard1.png" alt="">
       <img src="assets/images/artboard2.png" alt="">
@@ -14,7 +26,7 @@
   </ng-template>
   <ng-template ngbSlide>
       <img [src]="banners[1].bannerUrl" alt="first slide">
-      <!-- <img src="assets/images/loginslider1.jpg" alt="first slide">  -->
+      
       <div class="carousel-caption">
         <img src="assets/images/artboard1.png" alt="">
         <img src="assets/images/artboard2.png" alt="">
@@ -23,7 +35,7 @@
           <p>{{banners[1].bannerDescription}}</p>
           <a href="#" class="btn loginbtn">Learn How it Works</a>
         </div> 
-    </ng-template>
+    </ng-template> -->
 
   
   

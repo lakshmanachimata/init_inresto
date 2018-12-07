@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../../../services/login.service';
 
 @Component({
   selector: 'app-loginleft',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginleftComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit() {
   }
+
+  login(){
+    this.loginService.getLogin().subscribe((data) => {
+      console.log('Login Data >> ');
+      console.log(data);
+    });;
+  }
+
 
 }
