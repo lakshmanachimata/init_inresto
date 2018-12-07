@@ -2,13 +2,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DineindashboardComponent } from './dineindashboard.component';
 
-describe('DineindashboardComponent', () => {
+describe('DineinDashboardComponent', () => {
   let component: DineindashboardComponent;
   let fixture: ComponentFixture<DineindashboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DineindashboardComponent ]
+      declarations: [DineindashboardComponent ]
     })
     .compileComponents();
   }));

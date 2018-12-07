@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {CommonviewsModule} from '../../commonviews/commonviews.module'
 import { DineindashboardComponent } from './dineindashboard/dineindashboard.component';
 import { DineinreservwalkinComponent } from './dineinreservwalkin/dineinreservwalkin.component';
-import { CustomertimelineComponent } from './customertimeline/customertimeline.component';
-
+import { AddreservationpopupComponent} from './addreservationpopup/addreservationpopup.component'
+import {AddwalkinpopupComponent} from './addwalkinpopup/addwalkinpopup.component'
+import {CheckavailabilitypopupComponent} from './checkavailabilitypopup/checkavailabilitypopup.component'
 @NgModule({
-  declarations: [DineindashboardComponent, DineinreservwalkinComponent, CustomertimelineComponent],
+  declarations: [DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    CommonviewsModule
   ],exports:[
-    CustomertimelineComponent,
+    DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent
   ]
 })
 export class DineinModule { }
