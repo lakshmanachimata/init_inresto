@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
 import { BannerService} from './services/banner.service';
 import { LoginService} from './services/login.service';
+import { FormsModule } from '@angular/forms';
 import { LoggerService } from './logger.service';
 import { SharedModule } from './shared/shared.module';
 import { CommonviewsModule } from './commonviews/commonviews.module';
@@ -12,7 +13,8 @@ import { WelcomeModule } from './welcome/welcome.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -27,7 +30,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CommonviewsModule,
     WelcomeModule,
     BrowserAnimationsModule,
-    NgbModule,
+    // NgbModule,
   ],
   providers: [
     DataService,

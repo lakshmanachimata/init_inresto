@@ -4,6 +4,7 @@ import { LoggerService } from './logger.service';
 import { RouterModule, Routes, Router, RouterStateSnapshot, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
+import { Account } from './models/account.model'
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class DataService {
 
   static dataService: DataService;
 
+  userAccount:Account;
   menuIndex = 1;
   submenuIndex = 101;
   userLoggedIn = false;
@@ -27,8 +29,9 @@ export class DataService {
      return this.userLoggedIn;
    }
 
-   public setIsUserLoggedIn(loggedIn){
+   public setIsUserLoggedIn(loggedIn, userObj){
      this.userLoggedIn = loggedIn;
+     this.userAccount = userObj;
    }
    public setLeftMenuIndex(index){
      this.menuIndex = index;

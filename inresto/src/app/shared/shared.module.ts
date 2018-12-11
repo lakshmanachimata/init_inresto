@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderModule} from './header/header.module'
+import { FormsModule } from "@angular/forms";
 import { SubheaderModule } from './header/subheader/subheader.module'
 import { LeftsidebarModule } from './leftsidebar/leftsidebar.module'
 import { RightsidebarModule } from './rightsidebar/rightsidebar.module'
 import { FooterModule } from './footer/footer.module'
-import { LoginModule } from './login/login.module'
+import { LoginModule } from './login/login.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 // import { HeadermainComponent } from './header/headermain/headermain.component'
 // import { HeaderleftComponent } from './header/headerleft/headerleft.component'
 // import { HeaderrightComponent } from './header/headerright/headerright.component'
@@ -16,10 +18,11 @@ import { LoginModule } from './login/login.module'
 
 @NgModule({
   declarations: [
-  ],
+  PageNotFoundComponent],
   imports: [
     CommonModule,
     HeaderModule,
+    FormsModule,
     LeftsidebarModule,
     RightsidebarModule,
     FooterModule,

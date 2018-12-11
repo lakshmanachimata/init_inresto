@@ -31,7 +31,6 @@ export class CarouselConfigComponent implements OnInit {
     .getBanners()
     .subscribe((data: Banner[]) => {
       this.banners = data;
-      console.log('Data requested ... ');
       console.log(this.banners);
     });
   }

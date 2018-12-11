@@ -18,7 +18,8 @@ import { DineinModule } from './dinein/dinein.module'
     CommonviewsModule,
     DetailsModule,
     DineinModule,
-  ],exports:[
+  ],
+  exports:[
     WelcomeComponent,
   ]
 })

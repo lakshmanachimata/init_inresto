@@ -15,8 +15,8 @@ import { LoggerService } from './logger.service'
 export class AppComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy{
   title = 'inresto';
   constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
-    this.location.replaceState('/'); // clears browser history so they can't navigate with back button
-    this.router.navigateByUrl('welcome');
+    // this.location.replaceState('/'); // clears browser history so they can't navigate with back button
+    // this.router.navigateByUrl('welcome');
   }
   ngOnChanges(){
   }

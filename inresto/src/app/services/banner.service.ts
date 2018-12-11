@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BannerService {
 
-  uri = 'http://localhost:3001';
+  uri = 'http://localhost:3001/web';
 
   constructor(private http: HttpClient) { }
 

@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
-  uri = 'http://localhost:3001';
+  uri = 'http://localhost:3001/web';
 
   constructor(private http: HttpClient) { }
 
-  getLogin() {
-    return this.http.get(`${this.uri}/web/login`);
+  postLogin(username,password) {
+    return this.http.post(`${this.uri}/login`,{username,password});
   }
 }
