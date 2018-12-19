@@ -3,12 +3,14 @@ import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@a
 import { Location } from '@angular/common';
 import { DataService } from '../../../data.service';
 import { LoggerService } from '../../../logger.service';
+import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dineindashboard',
   templateUrl: './dineindashboard.component.html',
-  styleUrls: ['./dineindashboard.component.scss']
+  styleUrls: ['./dineindashboard.component.scss'],
+  providers: [NgbTabsetConfig]
 })
 export class DineindashboardComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
@@ -16,7 +18,9 @@ export class DineindashboardComponent implements OnInit, OnInit, DoCheck, AfterC
   showAddRsrv = false;
   showAvailability = false;
 
-  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
+  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location, config: NgbTabsetConfig) {
+    config.justify = 'start';
+    config.type = 'pills';
   }
 
   ngOnInit() {
