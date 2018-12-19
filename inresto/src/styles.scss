@@ -5,6 +5,16 @@ html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f
 .cmnBtn{margin: 0px 6px;border-radius: 5px;padding: 9px 20px;font-size: 12px;border: #f2f2f2; cursor: pointer; font-weight: 500;}
 .cmnBtn:hover{background: #f76858;border: #f76858;color: #fff;}
 .cmnBtn:focus, .close:focus { outline:none }
+
+
+.addIcon{position: relative; padding-left: 30px;}
+.addIcon:before{width: 12px; height: 12px; position: absolute; top: 12px; left: 12px; content: ""; background: url(/assets/images/plus-small.png) no-repeat;}
+
+.filterIcon{position: relative; padding:18px; border-radius: 50%;}
+.filterIcon:before{width: 18px; height: 18px; position: absolute; top: 11px; left: 9px; content: ""; background: url(/assets/images/filter.png) no-repeat;}
+.filterIcon:hover:before{background: url(/assets/images/filter-hover.png) no-repeat;}
+
+
 .modal-header .close{padding: .5rem !important;}
 .capMain .modal-header{background: #f2f2f2; text-align: center; height: 50px; display: inherit;}
 .capMain .modal-title{font-size: 16px; font-weight: 700;}
@@ -72,6 +82,5 @@ html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f
     color: #d8d8d8;
     cursor: pointer;
 }
-// import other style files next to all styles
-// @import '~bootstrap/scss/bootstrap'
+
 

@@ -1,100 +1,95 @@
-<!-- Nav tabs -->
-<ul class="nav nav-tabs navstyling" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#lr">Live Requests</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#rl">Reservation List</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#wwl">Walkin Waiting List</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#history">History</a>
-  </li>
-</ul>
-
-
-<app-addreservationpopup *ngIf="this.showAddRsrv == true"></app-addreservationpopup>
-
-
-<!-- Tab panes -->
-<div class="tab-content TabBg">
-  <div id="lr" class="tab-pane active"><br>
-    <div class="row">
-      <div class="col-md-3">
-        <h4 class="live_req">Live Requests</h4>
-      </div>
-      <div class="col-md-9 justify-content-end btnContainer">
-        <app-checkavailabilitypopup></app-checkavailabilitypopup>
-        <app-addreservationpopup></app-addreservationpopup>
-        <app-addwalkinpopup></app-addwalkinpopup>
-        <app-dineinfilters></app-dineinfilters>
-        <app-reservetablepopup></app-reservetablepopup> 
-       
-      </div>
-      <div class="col-md-12 bookingDetails">
-        <div class="col-md-4">14-11-2018</div>
-        <div class="col-md-8 justify-content-end">
-          <span>Bookings - 5</span>
-          <span>Diners - 12</span>
+<div class="dineindashboard">
+  <ngb-tabset>
+    <ngb-tab title="Live Requests">
+      <ng-template ngbTabContent>
+        <div class="row liveRequestMain">
+          <div class="col-md-3">
+            <h4 class="live_req">Live Requests</h4>
+          </div>
+          <div class="col-md-9 d-flex justify-content-end btnContainer">
+            <app-checkavailabilitypopup></app-checkavailabilitypopup>
+            <app-addreservationpopup></app-addreservationpopup>
+            <app-addwalkinpopup></app-addwalkinpopup>
+            <app-dineinfilters></app-dineinfilters>
+            <app-reservetablepopup></app-reservetablepopup>             
+          </div>
         </div>
-      </div>
-      <div class="col-md-12">
-        <table style="width:100%; font-size: 12px;">
-          <tr *ngFor="let user of respData">
-              <td><img src="assets/images/dinein_table.png"/></td>
-              <td>
+        <div class="row bookingDetails">
+          <div class="col-md-4"><span class="bdDate">14-11-2018</span> (11.30 am - 12.30 pm)</div>
+          <div class="col-md-8 d-flex justify-content-end">
+            <span>Bookings - 5</span>
+            <span>Diners - 12</span>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="col-md-12 dbTable">
+            <table class="table">
+              <tr *ngFor="let user of respData">
+                <td>
+                  <a href="javascript:;" placement="top" ngbTooltip="Assign Table"><img src="assets/images/dinein_table.png" /></a>
+                </td>
+                <td>
                   <div class="usernameContainer">
-                    <span>
-                        <img src="assets/images/userdetails.png"/>
-                    </span>
+                    <span><img src="assets/images/userdetails.png"/></span>
                     <span>
                       <strong>{{ user.name}}</strong><br>
                       {{ user.phone }}
                     </span>
                   </div>
-              </td> 
-              <td>
+                </td> 
+                <td>
                   AB's - Jubilee Hills<br>
+                  14-11-2018<br>      
+                </td>
+                <td>
+                  Pay For <br>
+                  Dineout
+                </td> 
+                <td>
+                  Requested<br>
                   14-11-2018<br>
-  
-              </td>
-              <td>
-                Pay For <br>
-                Dineout
-              </td> 
-              <td>
-                Requested<br>
-                14-11-2018<br>
-                12:30PM
-              </td>
-              <td>
+                  12:30PM
+                </td>
+                <td>
                   <b>Booked</b><br>
                   14-11-2018<br>
                   12:30PM
-              </td> 
-              <td>17 Visits</td>
-              <td><img src="assets/images/done.png"/></td>
-              <td><img src="assets/images/loading.png"/></td>
-              <td><img src="assets/images/delete.png"/></td>
-              <td><img src="assets/images/note.png"/></td>
-              <td><img src="assets/images/edit.png"/></td>
-          </tr>
-         
-        </table>
-      </div>
-    </div>
-  </div>
-  <div id="rl" class="container tab-pane fade"><br>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-  <div id="wwl" class="container tab-pane fade"><br>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam.</p>
-  </div>
-  <div id="history" class="container tab-pane fade"><br>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam.</p>
-  </div>
+                </td> 
+                <td>17 Visits</td>
+                <td><a href="javascript:;"><img src="assets/images/loading.png"/></a></td>
+                <td><a href="javascript:;"><img src="assets/images/done.png"/></a></td>
+                <td><a href="javascript:;"><img src="assets/images/delete.png"/></a></td>
+                <td><a href="javascript:;"><img src="assets/images/note.png"/></a></td>
+                <td><a href="javascript:;"><img src="assets/images/edit.png"/></a></td>
+              </tr>                
+            </table>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+
+    <ngb-tab title="Reservation List">
+      <ng-template ngbTabContent>
+        <p>Reservation List</p>
+      </ng-template>
+    </ngb-tab>
+
+
+    <ngb-tab title="Walkin Waiting List">
+      <ng-template ngbTabContent>
+        <p>Walkin Waiting List</p>
+      </ng-template>
+    </ngb-tab>
+
+
+    <ngb-tab title="History">
+      <ng-template ngbTabContent>
+        <p>History</p>
+      </ng-template>
+    </ngb-tab>
+
+  </ngb-tabset>
 </div>
+
+

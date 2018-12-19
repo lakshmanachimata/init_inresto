@@ -6,7 +6,7 @@ import { LeftsidebarModule } from './leftsidebar/leftsidebar.module'
 import { RightsidebarModule } from './rightsidebar/rightsidebar.module'
 import { FooterModule } from './footer/footer.module'
 import { LoginModule } from './login/login.module'
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { HeadermainComponent } from './header/headermain/headermain.component'
 // import { HeaderleftComponent } from './header/headerleft/headerleft.component'
 // import { HeaderrightComponent } from './header/headerright/headerright.component'
