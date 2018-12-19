@@ -21,18 +21,21 @@ import { OutletSingleOutletComponent } from './join-inresto/outlets/outlet-singl
 import { OutletAddOutletComponent } from './join-inresto/outlets/outlet-add-outlet/outlet-add-outlet.component';
 import { OutletAddBrandComponent } from './join-inresto/outlets/outlet-add-brand/outlet-add-brand.component';
 import { OutletAddCompanyComponent } from './join-inresto/outlets/outlet-add-company/outlet-add-company.component';
+import { RouterModule } from '@angular/router';
+import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
 
 @NgModule({
-  declarations: [WelcomeComponent, JoinInrestoComponent, JoinLeftnavigationComponent, JoinHeadertabComponent, CompanyProfileComponent, SingleOutletComponent, MultipleOutletComponent, MultipleCompaniesComponent, OutletsComponent, OutletSingleOutletComponent, OutletAddOutletComponent, OutletAddBrandComponent, OutletAddCompanyComponent],
+  declarations: [WelcomeComponent, JoinInrestoComponent, JoinLeftnavigationComponent, JoinHeadertabComponent, CompanyProfileComponent, SingleOutletComponent, MultipleOutletComponent, MultipleCompaniesComponent, OutletsComponent, OutletSingleOutletComponent, OutletAddOutletComponent, OutletAddBrandComponent, OutletAddCompanyComponent, AdminSettingsComponent],
   imports: [
     CommonModule,
     SharedModule,
     CommonviewsModule,
     DetailsModule,
     FormsModule,
+    RouterModule,
   ],exports:[
     WelcomeComponent,
-    JoinInrestoComponent
+    JoinInrestoComponent,
   ]
 })
 export class WelcomeModule { }
