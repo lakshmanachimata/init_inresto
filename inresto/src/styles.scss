@@ -2,7 +2,7 @@
 
 html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f2; font-size: 12px;}
 .form-control:focus{box-shadow: none !important;}
-.cmnBtn{margin: 0px 6px;border-radius: 5px;padding: 9px 20px;font-size: 12px;border: #f2f2f2; cursor: pointer;}
+.cmnBtn{margin: 0px 6px;border-radius: 5px;padding: 9px 20px;font-size: 12px;border: #f2f2f2; cursor: pointer; font-weight: 500;}
 .cmnBtn:hover{background: #f76858;border: #f76858;color: #fff;}
 .cmnBtn:focus, .close:focus { outline:none }
 .modal-header .close{padding: .5rem !important;}
@@ -11,13 +11,24 @@ html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f
 .capMain .modal-header .close{margin-top: -2.5rem}
 .popupwindow .card{border: none;}
 
-.cmnBtn{margin: 0px 6px;border-radius: 5px;padding: 9px 20px;font-size: 12px;border: #f2f2f2; cursor: pointer;}
-.cmnBtn:hover{background: #f76858;border: #f76858;color: #fff;}
-.cmnBtn:focus, .close:focus { outline:none }
-
 @media (min-width: 1366px){
-    .popupwindow .modal-dialog{max-width: 1024px !important;}
+    .popupwindow .modal-dialog{max-width: 940px !important;}
     }
+
+.arCarousel .owl-carousel .owl-nav button.owl-prev, 
+.arCarousel .owl-carousel .owl-nav button.owl-next{width: 34px; height: 34px; position: absolute; top: 40%; outline: none;}
+.arCarousel .owl-carousel .owl-nav button.owl-prev{left: -14px; background:#d8d8d8 url('assets/images/prev.png') center center no-repeat;}
+.arCarousel .owl-carousel .owl-nav button.owl-next{right: -14px;background:#d8d8d8 url('assets/images/next.png') center center no-repeat;}
+
+.left-navigation-text {
+    color: #d9d9d9;
+    font-size: 12px;
+}
+.left-navigation-text-active {
+    background: #f2f2f2;
+    color: #525252;
+    font-weight: 500;
+}
 
 .heading-20 {
     color: #525252;

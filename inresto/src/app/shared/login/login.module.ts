@@ -5,9 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { CarouselConfigComponent } from './carousel-config/carousel-config.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LoginleftComponent } from './loginleft/loginleft.component';
+import { LoginemilpasswordComponent } from './loginleft/loginemilpassword/loginemilpassword.component';
+import { LoginpinComponent } from './loginleft/loginpin/loginpin.component';
 
 @NgModule({
-  declarations: [LoginComponent, CarouselConfigComponent, LoginleftComponent],
+  declarations: [LoginComponent, CarouselConfigComponent, LoginleftComponent, LoginemilpasswordComponent, LoginpinComponent],
   imports: [
     CommonModule,
     NgbModule,

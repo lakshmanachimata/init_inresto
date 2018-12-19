@@ -1,7 +1,7 @@
 <!-- Nav tabs -->
 <ul class="nav nav-tabs navstyling" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#lr">Dashboard Live Requests</a>
+    <a class="nav-link active" data-toggle="tab" href="#lr">Live Requests</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#rl">Reservation List</a>
@@ -15,38 +15,33 @@
 </ul>
 
 
-<!-- <app-modal-config></app-modal-config> -->
-
-
-
 <app-addreservationpopup *ngIf="this.showAddRsrv == true"></app-addreservationpopup>
 
 
 <!-- Tab panes -->
 <div class="tab-content TabBg">
-  <div id="lr" class="container tab-pane active"><br>
+  <div id="lr" class="tab-pane active"><br>
     <div class="row">
-      <div class="col-md-3 d-flex">
+      <div class="col-md-3">
         <h4 class="live_req">Live Requests</h4>
       </div>
-      <div class="col-md-9 d-flex justify-content-end btnContainer">
+      <div class="col-md-9 justify-content-end btnContainer">
         <app-checkavailabilitypopup></app-checkavailabilitypopup>
         <app-addreservationpopup></app-addreservationpopup>
         <app-addwalkinpopup></app-addwalkinpopup>
         <app-dineinfilters></app-dineinfilters>
-
-
+        <app-reservetablepopup></app-reservetablepopup> 
        
       </div>
-      <div class="col-md-12 d-flex bookingDetails">
-        <div class="col-md-4 d-flex">14-11-2018</div>
-        <div class="col-md-8 d-flex justify-content-end">
+      <div class="col-md-12 bookingDetails">
+        <div class="col-md-4">14-11-2018</div>
+        <div class="col-md-8 justify-content-end">
           <span>Bookings - 5</span>
           <span>Diners - 12</span>
         </div>
       </div>
-      <div class="col-md-12 d-flex">
-      <table style="width:100%; font-size: 12px;">
+      <div class="col-md-12">
+        <table style="width:100%; font-size: 12px;">
           <tr *ngFor="let user of respData">
               <td><img src="assets/images/dinein_table.png"/></td>
               <td>

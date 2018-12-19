@@ -1,0 +1,74 @@
+.has-error .form-control {
+    border-color: #f76858;
+}
+.error_text{
+    color: #f76858;
+}
+.active{
+    color: #f76858;
+}
+.btn-primary{
+    background: #f76858;
+    border-color: #f76858;
+}
+.form-control{
+    border-color: #fff #fff  #e9ecef #fff;
+}
+.skycolor{
+    background: #a1d6ec;
+    border: #a1d6ec;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.form-check-inline{
+    display: inline-block;
+    position: relative;
+    padding: 3px 10px 0px 4px;
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.form-check-inline input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.preferName,.guestType{
+    margin-left: 26px;
+}
+.form-check-inline input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  } 
+
+.form-check-inline input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

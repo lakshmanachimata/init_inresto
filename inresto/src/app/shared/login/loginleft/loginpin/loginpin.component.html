@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group loginPin">        
+    <input type="text" class="form-control"  #input1 id="login_pin1" (keyup.enter)="moveNext($event, input2)" [(ngModel)]="pin1" name="login_pin" required maxlength="1">
+    <input type="text" class="form-control" #input2 id="login_pin2" (keyup.enter)="moveNext($event, input3)" [(ngModel)]="pin2"  name="login_pin" required maxlength="1">
+    <input type="text" class="form-control" #input3 id="login_pin3" (keyup.enter)="moveNext($event, input4)" [(ngModel)]="pin3" name="login_pin" required maxlength="1">
+    <input type="text" class="form-control" #input4 id="login_pin4" (keyup.enter)="moveNext($event, input1)" [(ngModel)]="pin4" name="login_pin" required maxlength="1">
+  </div>
+  <div class="clearfix mb25"></div>
+  <div class="form-group">        
+    <a class="forgotpwd" href="#">Forgot PIN?</a>
+  </div>
+  <div class="clearfix mb45"></div>
+  <button type="submit" class="btn loginbtn">Verify</button>
+</form>
+<p class="inrestoAccount">Need to Logout? <a href="#">Logout here.</a></p>

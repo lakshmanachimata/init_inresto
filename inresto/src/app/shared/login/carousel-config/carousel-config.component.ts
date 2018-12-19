@@ -30,7 +30,7 @@ export class CarouselConfigComponent implements OnInit {
     .getBanners()
     .subscribe((data: Banner[]) => {
       this.banners = data;
-      console.log(this.banners);
+      //console.log(this.banners);
     });
   }
 }

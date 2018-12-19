@@ -1,28 +1,17 @@
 <button class="cmnBtn" (click)="openLg(content)">Check Availability</button>
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="capMain">
-        <div class="modal-header">
-            <h4 class="modal-title" id="modal-basic-title">Check Availability</h4>
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="row">            
-                <div class="col-md-7 restoAvailableText">
-                    <p>Availability at restaurents in <span>Chennai</span> for <span>20.10.2018</span></p>
-                </div>
-                <div class="col-md-3">
-                    <p>asdsadasdasd</p>
-                </div>
-                <div class="col-md-2">
-                    <p>asdsadasdasd</p>
-                </div>
-            </div>
-            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-            
-        </div>
-    </div>
+	<div class="capMain">
+		<div class="modal-header">
+			<h4 class="modal-title" id="modal-basic-title">Check Availability</h4>
+			<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<app-checkavailabilitytables></app-checkavailabilitytables>
+			<app-availabilerestaurents></app-availabilerestaurents>
+		</div>
+	</div>
 
 </ng-template>
 

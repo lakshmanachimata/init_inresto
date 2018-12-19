@@ -1,20 +1,8 @@
 <div class="loginLeft">
   <img src="assets/images/loginlogo.png" alt="Inresto">
   <div class="clearfix mb45"></div>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">        
-      <input type="email" class="form-control" id="login_email" [(ngModel)]="username" placeholder="Email Address" name="email" required>
-    </div>
-    <div class="form-group">        
-      <input type="password" class="form-control" id="login_password" [(ngModel)]="password" placeholder="Password" name="email" required>
-    </div>
-    <div class="form-group">        
-      <a class="forgotpwd" href="#">Forgot Password?</a>
-    </div>
-    <div class="clearfix mb45"></div>
-    <button type="submit" class="btn loginbtn">Login</button>
-  </form>
-  <p class="inrestoAccount">Need a inResto Account? <a href="http://www.inresto.com/signup.html">Sign-up here.</a></p>
+  <app-loginemilpassword></app-loginemilpassword>
+  <!-- <app-loginpin></app-loginpin> -->
 
   <p class="copyright">© 2019 Powered by <span>inResto</span></p>
 </div>

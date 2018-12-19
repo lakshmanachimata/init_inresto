@@ -1,8 +1,8 @@
 <div>
-<div *ngIf="this.data.getIsUserLoggedIn()== false">
+<div *ngIf="this.data.getIsUserLoggedIn()== true">
     <app-login></app-login>
 </div>
-<div *ngIf="this.data.getIsUserLoggedIn()== true">
+<div *ngIf="this.data.getIsUserLoggedIn()== false">
 
 <app-headermain> </app-headermain>
 <!-- <app-restobutton buttonText="Next" color="#ff0000" bgcolor="#00ff00" cornerradius="10px" (setOnClick)="onButtonClick()" ></app-restobutton> -->

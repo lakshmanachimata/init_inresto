@@ -40,7 +40,7 @@ export class DataService {
    }
 
    public getIsUserLoggedIn(){
-     console.log(this.userLoggedIn);
+     //console.log(this.userLoggedIn);
      return this.userLoggedIn;
    }
 

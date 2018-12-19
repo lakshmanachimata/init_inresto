@@ -1,0 +1,15 @@
+<button class="cmnBtn" (click)="openLg(content)">Reservation Table</button>
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="capMain">
+		<div class="modal-header">
+			<h4 class="modal-title" id="modal-basic-title">Reservation Table</h4>
+			<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<app-reservetable></app-reservetable>			
+		</div>
+	</div>
+
+</ng-template>

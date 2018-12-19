@@ -1,0 +1,21 @@
+.reserveTab {text-align: center;}
+.reserveTab h4{text-align: center; font-size: 14px; font-weight: 700; color: #f26657;}
+:host ::ng-deep .nav-pills { margin-bottom: 20px;}
+:host ::ng-deep .nav-pills .nav-link{ margin: 0 5px; padding: .65rem 1rem; border: #979797 1px solid; font-weight: 500; font-size: 12px; color: #979797;}
+:host ::ng-deep .nav-pills .nav-link.active{background: #f2f2f2; color: #4a4a4a; font-weight: 600;}
+.tableSeater{width: 100px;height: 100px;display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: center;position: relative;margin: 10px 5px 0px 5px; cursor: pointer;}
+.tableSeater:hover{background-color: #f2f2f2;}
+.ts6{width: 150px;}
+.seater2{background-image: url(/assets/images/tables/table2.svg);}
+.seater2billing{background-image: url(/assets/images/tables/table2_billing.svg);}
+.seater2occupied{background-image: url(/assets/images/tables/table2_occupied.svg);}
+.seater4{background-image: url(/assets/images/tables/table4.svg);}
+.seater4billing{background-image: url(/assets/images/tables/table4_billing.svg);}
+.seater4occupied{background-image: url(/assets/images/tables/table4_occupied.svg);}
+.seater6{background-image: url(/assets/images/tables/table6.svg);}
+.seater6billing{background-image: url(/assets/images/tables/table6_billing.svg);}
+.seater6occupied{background-image: url(/assets/images/tables/table6_occupied.svg);}
+.tableSeater .floor, .tableSeater .seater{position:absolute; right: 0; left: 0; margin:auto; font-size: 14px; color: #4a4a4a;}
+.tableSeater .floor{font-weight: 500; font-size: 14px; top: 30px;}
+.tableSeater .seater{font-weight: 400; font-size: 11px; top: 50px;}
+.sTable{color: #4a4a4a !important; margin-top: 10px; margin-bottom: 20px;}
