@@ -47,29 +47,30 @@ export class AddreservationpopupComponent implements OnInit {
   guestType = [
     {
       id: 1,
-      name: 'VIP Guest'
+      name: 'VIP Guest',
+      icon: '/assets/images/VIP.png'
     },
     {
       id: 2,
-      name: 'HNI'
-    },
-    {
-      id: 3,
-      name: 'Regular'
+      name: 'HNI',
+      icon: '/assets/images/HNI.png'
     }
   ]
   preferences = [
     {
       id: 1,
-      name: 'Smoking Area'
+      name: 'Smoking Area',
+      icon: '/assets/images/Smoking.png'
     },
     {
       id: 2,
-      name: 'Low Music'
+      name: 'Low Music',
+      icon: '/assets/images/music.png'
     },
     {
       id: 3,
-      name: 'Kids Friendly'
+      name: 'Kids Friendly',
+      icon: '/assets/images/kids.png'
     }
   ];
   nationality = [
@@ -136,7 +137,7 @@ export class AddreservationpopupComponent implements OnInit {
       fullName: [null, [Validators.required, Validators.minLength(2), Validators.maxLength(10)]],
       phoneNumber: [null, Validators.required],
       numberOfGuests: [' ', Validators.required],
-      selectReservationDate: [null, Validators.required],
+      selectReservationDate: [new Date(), Validators.required],
       selectReservationTime: new Date().getHours() + ':' + new Date().getMinutes(),
       numberOfKids: [' '],
       numberOfFemale: [' '],

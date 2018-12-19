@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body">
             <div class="row">
-                <form class="col-md-12" [formGroup]="addReservation" (ngSubmit)="onSubmit()">
+                <form class="col-md-12" [formGroup]="addReservation" (ngSubmit)="onSubmit()" style="padding: 3px 3px 0px 3px;">
                     <div class="card">                        
                         <div class="card-body">
                             <div class="row">
@@ -32,20 +32,21 @@
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <div class="form-group">
-                                        <label class="mr-3">
-                                            <img src="assets/images/phoneIcon.png"/>
-                                        </label>
-                                        <label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <img src="assets/images/phoneIcon.png"/>
+                                                </span>
+                                            </div>
                                             <select class="form-control" id="countryId">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
                                                 <option>4</option>
                                             </select>
-                                        </label>
-                                        <label [ngClass]="{'has-error': formErrors.phoneNumber}">
-                                            <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" placeholder="Enter Phone number"/>
-                                        </label><br>
+                                            <input type="text" class="form-control" id="phoneNumber"
+                                                     formControlName="phoneNumber" placeholder="Enter Phone number"/>
+                                        </div>
                                         <span class="ml-1 error_text" *ngIf="formErrors.phoneNumber">
                                             {{ formErrors.phoneNumber }}
                                         </span>
@@ -53,93 +54,97 @@
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <div class="form-group">
-                                        <div class="form-check-inline" *ngFor="let guest of guestType">
+                                        <label class="form-check-inline" *ngFor="let guest of guestType">{{guest.name}}
                                             <input class="form-check-input" (change)="onGuestTypeChange(guest.name, $event.target.checked)" 
                                                         name="{{ guest.name }}" type="checkbox" id="{{guest.name}}">
-                                            <span class="checkmark"></span>
-                                            <label class="form-check-label guestType" for="{{guest.name}}" >
-                                                {{guest.name}}
-                                            </label>
-                                        </div>    
-                                        <!-- <div>{{guestTypeFormArray | json}}</div>
-                                        <div>{{addReservation.value | json}}</div> -->
+                                            <span class="checkmark">
+                                                <img src="{{ guest.icon }}"/>
+                                            </span>
+                                        </label>   
                                     </div>
                                 </div>
                             </div>
-                            <div class="row d-flex">
-                                <div class="col-md-6 d-flex">
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-group" [ngClass]="{'has-error' : formErrors.fullName }">
-                                        <label class="mr-3">
-                                            <img src="assets/images/profileIcon.png"/>
-                                        </label>
-                                        <label>
-                                            <input type="text" class="form-control" id="fullName" formControlName="fullName" placeholder="Enter Name"/>
-                                        </label><br>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img src="assets/images/profileIcon.png"/></span>
+                                            </div>
+                                            <input type="text" class="form-control" id="fullName"
+                                                     formControlName="fullName" placeholder="Enter Name" >
+                                        </div>
                                         <span class="ml-1 error_text" *ngIf="formErrors.fullName">
                                             {{ formErrors.fullName }}
                                         </span>
                                     </div>
                                 </div> 
-                                <div class="col-md-6 d-flex">
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="mr-3">
-                                            <img src="assets/images/mailIcon.png"/>
-                                        </label>
-                                        <label>
-                                            <input type="email" class="form-control" placeholder="Email Address(Optional)" id="email" formControlName="email" />
-                                        </label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img src="assets/images/mailIcon.png"/></span>
+                                            </div>
+                                            <input type="email" class="form-control" 
+                                                placeholder="Email Address(Optional)" id="email" formControlName="email" />
+                                        </div>
                                     </div>
                                 </div>      
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="mr-3">
-                                            <img src="assets/images/genderIcon.png"/>
-                                        </label>
-                                        <label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img src="assets/images/genderIcon.png"/></span>
+                                            </div>
                                             <select class="form-control" id="selectGender">
                                                 <option>Male</option>
                                                 <option>Female</option>
                                                 <option>Others</option>
                                             </select>
-                                        </label>
+                                        </div>
                                     </div>
                                 </div> 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="mr-3" for="Nationality">
-                                            <img src="assets/images/nationalityIcon.png"/>
-                                        </label>
-                                        <label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img src="assets/images/nationalityIcon.png"/></span>
+                                            </div>
                                             <select id="nationality"
                                             formControlName="nationality" class="form-control">
                                                <option *ngFor="let nation of nationality" [value]="nation.id"  [selected]="nation.id === nation.id">
                                                     {{ nation.name }}
                                                </option>
                                             </select>
-                                        </label>
+                                        </div>
                                     </div>
                                 </div>      
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label class="mr-3" for="dateOfBirth">
-                                        <img src="assets/images/birthdayIcon.png"/>
-                                    </label>
-                                    <label class="mr-3">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <img src="assets/images/birthdayIcon.png"/>
+                                            </span>
+                                        </div>
                                         <input id="dateOfBirth" name="dateOfBirth"  bsDatepicker 
                                         type="text" class="form-control" placeholder="BirthDay" formControlName="dateOfBirth"/>
-                                    </label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="mr-3" for="anniversaryDate">
-                                        <img src="assets/images/anniversaryIcon.png"/>
-                                    </label>
-                                    <label class="mr-3">
-                                        <input id="anniversaryDate" type="text"  name="anniversaryDate" placeholder="Anniversary Date" bsDatepicker class="form-control"  
-                                           formControlName="anniversaryDate"/>
-                                    </label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <img src="assets/images/birthdayIcon.png"/>
+                                            </span>
+                                        </div>
+                                        <input id="anniversaryDate" type="text"
+                                         name="anniversaryDate" placeholder="Anniversary Date" bsDatepicker 
+                                         class="form-control" formControlName="anniversaryDate"/>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
@@ -225,7 +230,8 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label><b>Assign Table</b></label><br>
-                                        <button class="btn btn-default skycolor">
+                                        <button class="btn btn-default skycolor" (click)="isCollapseTable = !isCollapseTable"
+                                        [attr.aria-expanded]="!isCollapseTable" aria-controls="collapseTable">
                                             <span class="pr-2"> <img src="assets/images/dinein.png"/></span>Edit Selection
                                         </button><br/>
                                         <p><i>Assigned: G4, G5, G6, G8, G12</i></p>
@@ -252,6 +258,14 @@
                                     <input class="form-check-input" type="checkbox"> Do Not Change the table'(DNC)'.
                                 </label>
                             </div>
+                            <div id="collapseTable" [ngbCollapse]="!isCollapseTable">
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <app-checkavailabilitytables></app-checkavailabilitytables>
+                                        <app-availabilerestaurents></app-availabilerestaurents>
+                                      </div>
+                                    </div>
+                                </div>
                             <div class="form-group">
                                 <div class=" d-flex justify-content-start">
                                     <label for="CompanyName" class="col-md-2 mt-3 mr-0 p-0">Company Name:</label>
@@ -263,14 +277,13 @@
                                     <b>Preferences</b>
                                 </label><br>
             
-                                <div class="form-check-inline" *ngFor="let prefer of preferences">
+                                <label class="form-check-inline" *ngFor="let prefer of preferences"> {{prefer.name}}
                                     <input class="form-check-input" (change)="onPreferenceChange(prefer.name, $event.target.checked)" 
                                         name="{{ prefer.name }}" type="checkbox" id="{{prefer.name}}">
-                                        <span class="checkmark"></span>
-                                    <label class="form-check-label preferName" for="{{prefer.name}}" >
-                                        {{prefer.name}}
-                                    </label>
-                                </div>
+                                        <span class="checkmark round">
+                                            <img src="{{ prefer.icon }}"/>
+                                        </span>
+                                </label>
 
                                 <!-- <div>{{preferenceFormArray | json}}</div> -->
                                 
@@ -289,7 +302,7 @@
                             </div>
                             <div class="col-md-12 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary ml-2">Save Reservation</button>
-                                <button class="btn btn-default ml-2">Cancel</button>
+                                <button class="btn btn-default ml-2" (click)="d('Cross click')">Cancel</button>
                             </div>
                         </div>
                     </div>

@@ -23,7 +23,8 @@
 .form-check-inline{
     display: inline-block;
     position: relative;
-    padding: 3px 10px 0px 4px;
+    cursor: pointer;
+    padding: 5px 15px 0px 35px;
     margin-bottom: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -41,15 +42,25 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+    height: 26px;
+    width: 26px;
+    border-radius: 4px; 
+    background: #ddd;
 }
+.checkmark img{
+    position: relative;
+    top: 3px;
+    left: 6px;
+    right: 6px;
+    bottom: 3px;
+    width: 14px;
+}
+
 .preferName,.guestType{
     margin-left: 26px;
 }
 .form-check-inline input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #c3e6a8;
 }
   /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -57,9 +68,8 @@
     position: absolute;
     display: none;
   } 
-
-.form-check-inline input:checked ~ .checkmark:after {
-    display: block;
+.round{
+    border-radius:14px;
 }
 .checkmark:after {
     left: 9px;
@@ -71,4 +81,15 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.input-group-text{
+    background: none !important;
+    border: none;
+}
+.modal-body{
+    padding: 0px 12px;
+}
+.card-footer{
+    border-top: none;
+    padding: 15px 15px;
 }
